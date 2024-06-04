@@ -20,6 +20,7 @@
     "queue": "yarn build && k6 run dist/queueTest.bundle.js",
     "smoke-cloud": "yarn build && k6 cloud dist/smokeTest.bundle.js",
     "load-cloud": "yarn build && k6 cloud dist/loadTest.bundle.js",
+    "queue-cloud": "yarn build && k6 cloud dist/queueTest.bundle.js",
     "go:docker": "yarn build && yarn test"
   },
   "dependencies": {

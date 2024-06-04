@@ -130,7 +130,7 @@ function createNamerequest(name: string, _httpParams: any) {
             fail(`Unable to create namerequest ${res.status} ${res.body}`)
         }
 
-        setSleep(0.5, 1)
+        setSleep(10, 30)
 
     })
 
@@ -159,7 +159,7 @@ function getNamerequestFees(nr: string) {
             fail(`Unable to retrieve fees ${res.status} ${res.body}`)
         }
 
-        setSleep(0.5, 1)
+        setSleep(5, 10)
 
     })
 }
@@ -195,7 +195,7 @@ function createPayment(nd_id: string, _httpParams: any) {
         if (!check(res, { 'Payment processed correctly': (r) => r.status === 201 })) {
             fail(`Unable to process payment ${res.status} ${res.body}`)
         }
-        setSleep(0.5, 1)
+        setSleep(10, 30)
 
     })
 
@@ -233,7 +233,7 @@ function processPaymentRefund(nr: string, nrNUm: string) {
             fail(`Unable to process refund ${res.status} ${res.body}`)
         }
 
-        setSleep(0.5, 1)
+        setSleep(10, 30)
 
     })
 }
